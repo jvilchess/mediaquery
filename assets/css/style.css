@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Noto+Serif+Display:ital,wght@0,100;0,200;1,100&family=Patrick+Hand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    background-color: #00579c;
+    width: 100%;
+    height: 100px;
+}
+
+header > h2 {
+    font-size: 3rem;
+    position: absolute;
+    padding: 20px 50px;
+    color: white;
+    font-family: 'Noto Serif Display', serif;
+    font-family: 'Patrick Hand', cursive;
+    
+
+}
+
+header > label {
+    float: right;
+    padding: 20px 50px;
+    font-size: 2rem;
+}
+
+header > ul {
+    float: right;
+    display: none;
+
+}
+
+header > ul > li > a {
+
+    color: white;
+    font-family: 'Gochi Hand', cursive;
+}
+
+.menu {
+    display: none;
+}
+
+#check:checked ~ ul {
+    display: block;
+}
+
+.section {
+    background-color: #e1e2e1;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Gochi Hand', cursive;
+}
+
+section > form > label {
+    display: block;
+    font-family: 'Gochi Hand', cursive;
+}
+
+#search {
+    width: 80%;
+    height: 2rem;
+    font-family: 'Gochi Hand', cursive;
+}
+
+.fotos {
+    border: .5px solid #6C5F5B;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+img {
+    width: 90%;
+}
+
+
+main > div > p {
+    padding: .5rem;
+}
+
+.cuadro {
+    background-color:#00579b;
+    width: 40%;
+    height: 2rem;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    color: #F2F1EB;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.paginas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginas > a {
+    border: 1px solid #004225;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #012f6b;
+    color: white;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+@media (min-width: 576px) {
+    header > h2 {
+        padding: 20px;
+    }
+
+    header > label {
+        display: none;
+    }
+
+    header > ul {
+        display: flex;
+        font-size: 1.5rem;
+        padding: 1.5rem 0.3rem;
+    }
+
+    header > ul > li {
+        padding-right: .5rem;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-container {
+        grid-template-areas:
+        'header header'
+        'section main'
+        'footer footer'
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .section {
+        grid-area: section;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+  
+}
+
+@media (min-width: 992px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        'header section'
+        'header main'
+        'footer main';
+    }
+    
+    header {
+        grid-area: header;
+        height: 100%;
+        width: 320px;
+    }
+
+    header > ul {
+        display: flex;
+        flex-direction: column;
+        padding-top: 130px;
+        padding-left: 30px;
+        position: absolute;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .section {
+        grid-area: section;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+}
